@@ -7,6 +7,9 @@
 
 # dependencies
 /node_modules
+/express-app/node_modules
+.env
+
 
 # IDEs and editors
 /.idea

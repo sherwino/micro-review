@@ -1,0 +1,173 @@
+
+
+// new leaf --- #00537E → #3AA17E
+// Wrought Iron --- #333333 → #5A5454
+// Previous Blue ---#00d2ff, #3a7bd5
+
+.body-main {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background: url('../images/bg2.jpg');
+    // background-size: 170%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    }
+
+.body-other {
+    background: url('../images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.imgScale {
+  padding: 5%;
+  size: 75%;
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  background: #5A5454;
+  color: #fff;
+}
+
+.success {
+  background-color: turquoise;
+  color: black;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.error {
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+img {
+  width: 100%;
+
+}
+
+.inner {
+  padding: 15px 50px;
+}
+
+.table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
+  background-color: #ccc;
+}
+
+.table {
+  background-color: #fff;
+}
+
+// .form-tainer input, .form-group #f10  {
+//   width: 40%;
+// }
+
+// header {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 80px;
+//   width: 100%;
+//   margin-bottom: 110px;
+//   background: white;
+// }
+
+/*form {
+	padding: 20px 0;
+	position: relative;
+	z-index: 2;
+}
+
+input, #room-desc-input {
+		display: block;
+		appearance: none;
+		outline: 0;
+		border: 1px solid fade(white, 40%);
+		background-color: fade(white, 20%);
+		width: 200px;
+
+		border-radius: 3px;
+		padding: 10px 15px;
+		margin: 0 auto 10px auto;
+		display: block;
+		text-align: center;
+		font-size: 18px;
+
+		color: #FF512F;
+
+		transition-duration: 0.25s;
+		font-weight: 300;
+
+		&:hover{
+			background-color: fade(white, 40%);
+		}
+
+		&:focus{
+			background-color: white;
+			width: 250px;
+
+			color: #FF512F;
+		}
+	}
+
+	button {
+		appearance: none;
+		outline: 0;
+		background-color: white;
+		border: 0;
+		padding: 10px 15px;
+		color: #FF512F;
+		border-radius: 3px;
+		width: 200px;
+		cursor: pointer;
+		font-size: 18px;
+		transition-duration: 0.25s;
+
+		&:hover{
+			background-color: rgb(245, 247, 249);
+		}
+	}
+}
+*/
+
+// .inner {
+//   padding: 0px;
+//   margin: 20px;
+//   position: absolute;
+//   top: 180px;
+// }
+
+//
+// .navStyle ul {
+//   background-color: #fff;
+//   text-align: center;
+//   padding: 0;
+//   margin: 0;
+//   display: inline-block;
+// }
+// .navStyle li {
+//   font-size: 1.2em;
+//   line-height: 40px;
+//   height: 40px;
+// }
+//
+// .navStyle a {
+//   padding: 10px;
+//   color: #FF512F;
+//   display: block;
+//   transition: .3s background-color;
+// }
+// .navStyle a:hover {
+//   background-color: #DD2476;
+// }
+//
+// .navStyle a.active {
+//   background-color: #ccc;
+//   color: #444;
+//   cursor: default;
+// }
