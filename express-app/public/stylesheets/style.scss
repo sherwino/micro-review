@@ -1,173 +1,99 @@
 
+// https://youtu.be/IbWOQWw1wkM?t=22s
 
-// new leaf --- #00537E → #3AA17E
-// Wrought Iron --- #333333 → #5A5454
-// Previous Blue ---#00d2ff, #3a7bd5
+/* Carousel and pictures */
 
-.body-main {
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background: url('../images/bg2.jpg');
-    // background-size: 170%;
-    background-repeat: no-repeat;
-    overflow: hidden;
+.view:not(.hm-zoom) {
+    overflow:visible;
+}
+
+/* Margin from the top */
+
+.container {
+    .row {
+        margin-top: 2.5rem;
     }
-
-.body-other {
-    background: url('../images/bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
 }
 
-.imgScale {
-  padding: 5%;
-  size: 75%;
+/* Simple blog listing */
+
+.simple-blog-listing {
+    .single-post {
+        margin-bottom: 5rem;
+        &.simple-post-text {
+            margin-bottom: 0;
+            border-bottom: 1px solid #e0e0e0;
+            .post-pictures {
+                img {
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+        h5 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 1.2rem;
+        }
+        .post-data {
+            h5 {
+                margin-bottom: 2rem;
+                font-weight: 400;
+                i {
+                    padding-left: 1rem;
+                }
+            }
+        }
+    }
 }
 
+/* Archive */
 
-footer {
-  position: fixed;
-  bottom: 0px;
-  background: #5A5454;
-  color: #fff;
+.archive {
+    ul {
+        li {
+            padding-top: 0.8rem;
+            border-top: 1px solid #eceeef;
+            &:first-of-type {
+                border-top: none;
+            }
+            padding-bottom: 0.3rem;
+        }
+    }
 }
 
-.success {
-  background-color: turquoise;
-  color: black;
-  border-radius: 10px;
-  padding: 5px;
+/* Author widget */
+
+.simple-author-widget {
+    .author-photo {
+        margin-bottom: 1.8rem;
+    }
+    .about-author {
+        h4 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        p {
+            text-align: justify;
+        }
+    }
 }
 
-.error {
-  background-color: red;
-  color: white;
-  border-radius: 10px;
-  padding: 15px;
+/* Simple author page */
+
+.simple-author-page {
+    h1 {
+        margin-bottom: 2rem;
+    }
+    p {
+        text-align: center;
+    }
+    .view {
+        img {
+            margin-top: 2rem;
+        }
+    }
 }
-
-img {
-  width: 100%;
-
-}
-
-.inner {
-  padding: 15px 50px;
-}
-
-.table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
-  background-color: #ccc;
-}
-
-.table {
-  background-color: #fff;
-}
-
-// .form-tainer input, .form-group #f10  {
-//   width: 40%;
-// }
-
-// header {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   height: 80px;
-//   width: 100%;
-//   margin-bottom: 110px;
-//   background: white;
-// }
-
-/*form {
-	padding: 20px 0;
-	position: relative;
-	z-index: 2;
-}
-
-input, #room-desc-input {
-		display: block;
-		appearance: none;
-		outline: 0;
-		border: 1px solid fade(white, 40%);
-		background-color: fade(white, 20%);
-		width: 200px;
-
-		border-radius: 3px;
-		padding: 10px 15px;
-		margin: 0 auto 10px auto;
-		display: block;
-		text-align: center;
-		font-size: 18px;
-
-		color: #FF512F;
-
-		transition-duration: 0.25s;
-		font-weight: 300;
-
-		&:hover{
-			background-color: fade(white, 40%);
-		}
-
-		&:focus{
-			background-color: white;
-			width: 250px;
-
-			color: #FF512F;
-		}
-	}
-
-	button {
-		appearance: none;
-		outline: 0;
-		background-color: white;
-		border: 0;
-		padding: 10px 15px;
-		color: #FF512F;
-		border-radius: 3px;
-		width: 200px;
-		cursor: pointer;
-		font-size: 18px;
-		transition-duration: 0.25s;
-
-		&:hover{
-			background-color: rgb(245, 247, 249);
-		}
-	}
-}
-*/
-
-// .inner {
-//   padding: 0px;
-//   margin: 20px;
-//   position: absolute;
-//   top: 180px;
-// }
-
-//
-// .navStyle ul {
-//   background-color: #fff;
-//   text-align: center;
-//   padding: 0;
-//   margin: 0;
-//   display: inline-block;
-// }
-// .navStyle li {
-//   font-size: 1.2em;
-//   line-height: 40px;
-//   height: 40px;
-// }
-//
-// .navStyle a {
-//   padding: 10px;
-//   color: #FF512F;
-//   display: block;
-//   transition: .3s background-color;
-// }
-// .navStyle a:hover {
-//   background-color: #DD2476;
-// }
-//
-// .navStyle a.active {
-//   background-color: #ccc;
-//   color: #444;
-//   cursor: default;
-// }
