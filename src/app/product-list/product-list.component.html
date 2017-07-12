@@ -1,0 +1,17 @@
+<h2>Search Products</h2>
+
+<!-- If there as an error let the user know on the top of the page -->
+<div class=" error" *ngIf="errorMessage"> {{ errorMessage }} </div>
+
+<!-- List all of the products -->
+<div class = "product-list">
+  div *ngFor ="let oneProduct of products">
+    <img [src]="oneProduct.image">
+    <h3> {{ oneProduct.name }} </h3>
+    <h4><i> {{ oneProduct.brand }} </i> </h4>
+
+    <!-- Using the router, find the product by the id and lets see details page -->
+    <a [routerLink]='product, oneProduct._id'>Details</a>
+
+  </div>
+</div>
