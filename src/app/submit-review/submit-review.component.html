@@ -1,3 +1,38 @@
-<p>
-  submit-review works!
-</p>
+<h2>Submit a New Review</h2>
+<a [routerLink]="['']"> Back to list </a>
+
+<form (ngSubmit)="newReviewObject(datafromform)" #myForm="ngForm">
+  <p>
+    Brand: <small><i>Apple</i></small>
+    <input type="text" name="brand" [(ngModel)]="brand" required />
+  </p>
+  <p>
+    Model Name: <small><i>iPhone 6s Plus</i></small>
+    <input type="text" name="modelName" [(ngModel)]="modelName" required />
+  </p>
+  <p>
+    Model Number: <small><i>A1633</i></small>
+    <input type="text" name="modelNum" [(ngModel)]="modelNum" required />
+  </p>
+  <p>
+    Product's UPC: <small><i>700362685371</i></small>
+    <input type="text" name="prodUPC" [(ngModel)]="prodUPC" required />
+  </p>
+  <p>
+    Manufactured By: <small><i>Foxcomm, Samsung, Carl Zeiss, Dolby Labs</i></small>
+    <input type="text" name="mfgBy" [(ngModel)]="mfgBy" required />
+  </p>
+  <p>
+    Product Components: <small><i>Camera, Microphone, Speaker, Compass</i></small>
+    <input type="text" name="prodParts" [(ngModel)]="prodParts" required />
+  </p>
+  <p>
+    Product Image: <small><i>Upload an image of the product</i></small>
+    <input type="text" name="prodImg" [(ngModel)]="prodImg" required />
+  </p>
+  <button (click)="submit()"> submit </button>
+</form>
+
+<a [routerLink]="['']"> Back to list </a>
+
+<p> {{ feedback }} </p>

@@ -53,6 +53,7 @@ prodImg:   String;    // Don't know if this is going to work with photo upload
     this.myRoute.params.subscribe((params) => this.newReview = {} );
   }
 
+// when you submit the form from the dom it calls this function which will capture all of the values
 newReviewObject(datafromform) {
   //lets see what we are receiving from the form
   console.log(datafromform);
@@ -97,7 +98,7 @@ reviewtoApi() {
     this.prodParts = [];
     this.prodImg = "";
     this.newReview = {};
-        
+
   });
 }
 

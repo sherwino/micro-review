@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductsComponent } from './products/products.component';
+import { SubmitReviewComponent } from './submit-review/submit-review.component';
 // import { FileUploadComponent } from ./'file-upload/file-upload.component';
 
 const routes: Routes = [
@@ -15,6 +16,11 @@ const routes: Routes = [
   {
     path: 'product/:id',
     component: ProductsComponent
+  },
+
+  {
+    path: 'submit',
+    component: SubmitReviewComponent
   }
 ];
 
