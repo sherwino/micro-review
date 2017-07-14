@@ -15,7 +15,9 @@ import { ArticlesComponent } from './articles/articles.component';
 import { CommentsComponent } from './comments/comments.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ProductService } from './products.service';
 import { ProductListComponent } from './product-list/product-list.component';
+import { SubmitReviewComponent } from './submit-review/submit-review.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +28,16 @@ import { ProductListComponent } from './product-list/product-list.component';
     CommentsComponent,
     LoginComponent,
     ProfileComponent,
-    ProductListComponent
+    ProductListComponent,
+    SubmitReviewComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
