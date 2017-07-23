@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { ProductService } from '../products.service';
+import { CompleterService, CompleterData } from 'ng2-completer';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-submit-review',
@@ -39,12 +40,30 @@ mfgEnd:    Date;      // November 15, 2017
 prodParts: String[];  // [Camera, Microphone, Speakers]
 prodImg:   String;    // Don't know if this is going to work with photo upload
 
+//Testing this AutoCompleteService
+protected searchStr: string;
+protected captain: string;
+protected dataService: CompleterData;
+protected searchData = [
+  { color: 'red', value: '#f00' },
+  { color: 'green', value: '#0f0' },
+  { color: 'blue', value: '#00f' },
+  { color: 'cyan', value: '#0ff' },
+  { color: 'magenta', value: '#f0f' },
+  { color: 'yellow', value: '#ff0' },
+  { color: 'black', value: '#000' }
+];
+protected captains = ['James T. Kirk', 'Benjamin Sisko', 'Jean-Luc Picard', 'Spock', 'Jonathan Archer', 'Hikaru Sulu', 'Christopher Pike', 'Rachel Garrett' ];
+
+
   constructor(
     // creating a routing instance in this view
     private myRoute: ActivatedRoute,
     private myProductService: ProductService,
-    private myRouter: Router
-  ) { };
+    private myRouter: Router,
+    // the AutoCompleteService
+    private completerService: CompleterService
+  ) { this.dataService = completerService.local(this.searchData, 'color', 'color')};
 
   ngOnInit() {
     // similar to document.ready
@@ -63,8 +82,8 @@ newReviewObject(datafromform) {
   this.modelNum =     datafromform.form.controls.modelNum._value;
   this.prodUPC =      datafromform.form.controls.prodUPC._value;
   this.mfgBy =        datafromform.form.controls.mfgBy._value.split(",");
-  // this.mfgStart =     datafromform.form.controls.mfgStart._value;
-  // this.mfgEnd =       datafromform.form.controls.mfgEnd._value;
+  // this.mfgStart =  datafromform.form.controls.mfgStart._value;
+  // this.mfgEnd =    datafromform.form.controls.mfgEnd._value;
   this.prodParts =    datafromform.form.controls.prodParts._value.split(",");
   this.prodImg =       datafromform.form.controls.prodImg._value;
 
@@ -103,3 +122,4 @@ reviewtoApi() {
 }
 
 }
+//https://api.upcitemdb.com/prod/trial/search?s=MacBook%20Pro&brand=Apple&match_mode=0&type=product

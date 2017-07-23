@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../products.service';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-product-list',
@@ -9,6 +9,7 @@ import { ProductService } from '../products.service';
 export class ProductListComponent implements OnInit {
   products = [];
   errorMessage: string = ''; //not sure why I need this here yet
+  title = "microReviews - Browse";
 
   constructor(private myProductService: ProductService) { }
 

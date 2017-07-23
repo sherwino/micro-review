@@ -1,16 +1,134 @@
-<!--The whole content below can be removed with the new code.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!!
-  </h1>
-  <img width="300" src="../assets/microReview-Logo.png" />
-</div>
-<h2>Things to note: </h2>
-<ul>
-  <li>
-    <h2>This is A Work in Progress</h2>
-  </li>
-  <li>
-    <h2>Only 1% Complete <progress value="1" max="100">1% Complete</progress></h2>
-  </li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ title }}</title>
+
+</head>
+
+  <body class='full-bg-img body-main image-responsive '>
+    <header>
+      <!--Navbar-->
+      <nav class="navbar navbar-toggleable-md navbar-dark fixed-top scrolling-navbar">
+          <div class="container">
+              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <a class="navbar-brand" href="#">
+                  <strong>microReviews</strong>
+              </a>
+              <div class="collapse navbar-collapse" id="navbarNav1">
+                  <ul class="navbar-nav mr-auto">
+                      <!-- <li class="nav-item active">
+                          <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                      </li> -->
+                      <li class="nav-item">
+                          <a [routerLink]="['/browse']" class="nav-link">Browse</a>
+                      </li>
+                      <li class="nav-item">
+                          <a [routerLink]="['/submit']" class="nav-link">Submit a review</a>
+                      </li>
+                      <li class="nav-item">
+                          <a [routerLink]="['/']" fragment="about" class="nav-link">About</a>
+                      </li>
+                      <li *ngIf="isLoggedIn" class="nav-item">
+                          <a [routerLink]="['#about']"  class="nav-link">About</a>
+                      </li>
+                  </ul>
+                  <form class="form-inline waves-effect waves-light">
+                      <input class="form-control" type="text" placeholder="Search">
+                  </form>
+              </div>
+          </div>
+      </nav>
+      <!--/.Navbar-->
+    </header>
+
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+
+      <!--Footer-->
+      <footer class="page-footer center-on-small-only">
+
+          <!--Footer Links-->
+          <div class="container-fluid">
+              <div class="row">
+
+                  <!--First column-->
+                  <div class="col-lg-3 offset-lg-1 hidden-lg-down">
+                      <h5 class="title" id="about">ABOUT microReviews</h5>
+                      <p>microReviews was developed to better inform manufacturers and consumers about several products.</p>
+
+                      <p>While a consumer wants to make an informed purchase, manufacturers want to know what they did right so that they can sell more products.</p>
+
+                      <p>This site can give everyone the opportunity to express their experiences with the smallest components that make a product.</p>
+                  </div>
+                  <!--/.First column-->
+
+                  <hr class="hidden-md-up">
+
+                  <!--Second column-->
+                  <div class="col-lg-2 col-md-4 offset-lg-1">
+                      <h5 class="title">First column</h5>
+                      <ul>
+                          <li><a href="#!">Link 1</a></li>
+                          <li><a href="#!">Link 2</a></li>
+                          <li><a href="#!">Link 3</a></li>
+                          <li><a href="#!">Link 4</a></li>
+                      </ul>
+                  </div>
+                  <!--/.Second column-->
+
+                  <hr class="hidden-md-up">
+
+                  <!--Third column-->
+                  <div class="col-lg-2 col-md-4">
+                      <h5 class="title">Second column</h5>
+                      <ul>
+                          <li><a href="#!">Link 1</a></li>
+                          <li><a href="#!">Link 2</a></li>
+                          <li><a href="#!">Link 3</a></li>
+                          <li><a href="#!">Link 4</a></li>
+                      </ul>
+                  </div>
+                  <!--/.Third column-->
+
+                  <hr class="hidden-md-up">
+
+                  <!--Fourth column-->
+                  <div class="col-lg-2 col-md-4">
+                      <h5 class="title">Third column</h5>
+                      <ul>
+                          <li><a href="#!">Link 1</a></li>
+                          <li><a href="#!">Link 2</a></li>
+                          <li><a href="#!">Link 3</a></li>
+                          <li><a href="#!">Link 4</a></li>
+                      </ul>
+                  </div>
+                  <!--/.Fourth column-->
+
+              </div>
+          </div>
+          <!--/.Footer Links-->
+
+          <hr>
+          <!--Call to action-->
+          <div class="call-to-action">
+              <h4>Made with &hearts; at Ironhack by Sherwino</h4>
+              <ul>
+                  <li>
+                      <h5>Check me out on github</h5></li>
+                  <li><a target="_blank" href="https://github.com/sherwino" class="btn btn-danger" rel="nofollow">Sherwino</a></li>
+                  <li><a href="/" class="btn btn-default" rel="nofollow">This is the way back home</a></li>
+              </ul>
+          </div>
+          <!--/.Call to action-->
+
+    </footer>
+
+
+  </body>
+</html>
