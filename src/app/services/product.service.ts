@@ -2,10 +2,12 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
+import { environment } from '../../environments/environment';
+
 @Injectable()
 export class ProductService {
   // maybe I should have an env variable here instead of localhost
-  BASE_URL: string = 'http://localhost:3000';
+  BASE_URL: string = environment.apiUrl;
 
   constructor(private myHttp: Http) { }
 
