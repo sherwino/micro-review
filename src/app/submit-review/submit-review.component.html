@@ -3,12 +3,11 @@
 
 <a [routerLink]="['/browse']"> Back to list </a>
 <div class="review-form">
-  <form (ngSubmit)="newReviewObject(datafromform)" #myForm="ngForm">
+  <form (ngSubmit)="newProductform()" #myForm="ngForm">
     <div class="form-group">
       <p>
         Brand: <small><i>Apple</i></small>
-        <ng2-completer [(ngModel)]="searchStr" [datasource]="captains" [minSearchLength]="0"
-        class="form-control" type="text" name="brand" required ></ng2-completer>
+        <input class="form-control" type="text" name="brand" [(ngModel)]="brand" required />
       </p>
       <p>
         Model Name: <small><i>iPhone 6s Plus</i></small>
@@ -37,10 +36,14 @@
         <input class="form-control-file" type="text" name="prodImg" [(ngModel)]="prodImg" required />
       </p>
     </div>
-    <button class="btn btn-primary" (click)="submit()"> submit </button>
+    <button class="btn btn-primary">Submit </button>
   </form>
 </div>
 
 <a [routerLink]="['/browse']"> Back to list </a>
 
 <p> {{ feedback }} </p>
+
+
+<!-- <ng2-completer [(ngModel)]="searchStr" [datasource]="captains" [minSearchLength]="0"
+class="form-control" type="text" name="brand" required ></ng2-completer> -->
