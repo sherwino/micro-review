@@ -2,38 +2,39 @@
 
 
 <a [routerLink]="['/browse']"> Back to list </a>
+
 <div class="review-form">
   <form (ngSubmit)="newProductform()" #myForm="ngForm">
     <div class="form-group">
       <p>
-        Brand: <small><i>Apple</i></small>
-        <input class="form-control" type="text" name="brand" [(ngModel)]="brand" required />
+        <label for="brand"> Brand: <small><i>Apple</i></small></label>
+        <input class="form-control" id="brand" type="text" name="brand" [(ngModel)]="newProduct.brand" required />
       </p>
       <p>
-        Model Name: <small><i>iPhone 6s Plus</i></small>
-        <input class="form-control" type="text" name="modelName" [(ngModel)]="modelName" required />
+        <label for="modelName"> Model Name: <small><i>iPhone 6s Plus</i></small></label>
+        <input class="form-control" id="modelName" type="text" name="modelName" [(ngModel)]="newProduct.modelName" required />
       </p>
       <p>
-        Model Number: <small><i>A1633</i></small>
-        <input class="form-control" type="text" name="modelNum" [(ngModel)]="modelNum" required />
+        <label for="modelNum"> Model Number: <small><i>A1633</i></small></label>
+        <input class="form-control" id="modelNum" type="text" name="modelNum" [(ngModel)]="newProduct.modelNum">
       </p>
       <p>
-        Product's UPC: <small><i>700362685371</i></small>
-        <input class="form-control" type="text" name="prodUPC" [(ngModel)]="prodUPC" required />
+        <label for="prodUPC"> Product's UPC: <small><i>700362685371</i></small></label>
+        <input class="form-control" id="prodUPC" type="text" name="prodUPC" [(ngModel)]="newProduct.prodUPC">
       </p>
       <p>
-        Manufactured By: <small><i>Foxcomm, Samsung, Carl Zeiss, Dolby Labs</i></small>
-        <input class="form-control" type="text" name="mfgBy" [(ngModel)]="mfgBy" required />
+        <label for="mfgBy"> Manufactured By: <small><i>Foxcomm, Samsung, Carl Zeiss, Dolby Labs</i></small></label>
+        <input class="form-control" id="mfgBy" type="text" name="mfgBy" [(ngModel)]="newProduct.mfgBy">
       </p>
       <p>
-        Product Components: <small><i>Camera, Microphone, Speaker, Compass</i></small>
-        <input class="form-control" type="text" name="prodParts" [(ngModel)]="prodParts" required />
+        <label for="prodParts"> Product Components: <small><i>Camera, Microphone, Speaker, Compass</i></small></label>
+        <input class="form-control" id="prodParts" type="text" name="prodParts" [(ngModel)]="newProduct.prodParts">
       </p>
     </div>
     <div class="form-group">
       <p>
-        Product Image: <small><i>Upload an image of the product</i></small>
-        <input class="form-control-file" type="text" name="prodImg" [(ngModel)]="prodImg" required />
+        <label for="prodImg"> Product Image: <small><i>Upload an image of the product</i></small></label>
+        <input class="form-control-file" id="prodImg" type="text" name="prodImg" [(ngModel)]="newProduct.prodImg">
       </p>
     </div>
     <button class="btn btn-primary">Submit </button>

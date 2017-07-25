@@ -35,7 +35,7 @@ export class ProductService {
 createNew(dataToSend) {
   return this.myHttp.post(`${this.BASE_URL}/api/products`, dataToSend)
   .toPromise()
-  .then(apiResponse => apiResponse.json())
+  .then(apiResponse => apiResponse.json());
 }
 
 //very similar to the get request but now you are asking the express api to delete

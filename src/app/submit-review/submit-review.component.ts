@@ -35,10 +35,10 @@ modelName: String;    // iPhone 6s Plus
 modelNum:  String;    // A1633
 partNum:   String;    // MKR82LL/A
 prodUPC:   String;    //  700362685371
-mfgBy:     String[];  // [Foxcomm, Samsung, Carl Zeiss]
+mfgBy:     String;  // [Foxcomm, Samsung, Carl Zeiss]
 mfgStart:  Date;      // March 15, 2015
 mfgEnd:    Date;      // November 15, 2017
-prodParts: String[];  // [Camera, Microphone, Speakers]
+prodParts: String;  // [Camera, Microphone, Speakers]
 prodImg:   String;    // Don't know if this is going to work with photo upload
 
 //Testing this AutoCompleteService
@@ -70,14 +70,14 @@ prodImg:   String;    // Don't know if this is going to work with photo upload
     // similar to document.ready
     // listen to all of the paramaters passed through the active route
     // return the parameters as an object
-    // this.myRoute.params.subscribe((params) => this.newReview = {} );
+    // this.myRoute.params.subscribe((params) => this.newProduct = {} );
   }
 
 // when you submit the form from the dom it calls this function which will capture all of the values
-newProductform(formData) {
+newProductform() {
   //lets see what we are receiving from the form
-  console.log(formData);
-    this.myProductService.createNew(this.newProduct).then((formData) => {
+    this.myProductService.createNew(this.newProduct).then((dataFromApi) => {
+      console.log(this.newProduct);
       this.myRouter.navigate(['/browse']);
 
     })
@@ -116,7 +116,7 @@ newProductform(formData) {
 
 // since this object is going directly to the backend the key ie brand: needs to match the mongo one
 // reviewtoApi() {
-//   this.newReview = {
+//   this.newProduct = {
 //     brand:               this.brand,
 //     model:               this.modelName,
 //     modelNum:            this.modelNum,
