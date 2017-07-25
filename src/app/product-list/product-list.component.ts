@@ -7,7 +7,7 @@ import { ProductService } from '../services/product.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  products = [];
+  products:     any[] = [];
   errorMessage: string = ''; //not sure why I need this here yet
   title = "microReviews - Browse";
 

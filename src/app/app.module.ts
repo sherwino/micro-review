@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms'; //a form handling module from angu
 import { HttpModule } from '@angular/http'; //a HTTP routing module
 import { Ng2CompleterModule } from 'ng2-completer';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MdButtonModule, MdCheckboxModule} from '@angular/material';
+import {MdButtonModule, MdCheckboxModule, MdCardModule, MdMenuModule,
+  MdToolbarModule, MdIconModule, MdGridListModule, MdSidenavModule } from '@angular/material';
 //a module that will let me select files and upload them
 // ng2-file-upload is a third party module need to install to use
 // import { FileSelectDirective, FileUploader } from 'ng2-file-upload';
@@ -47,6 +48,12 @@ import { HomeComponent } from './home/home.component';
     BrowserAnimationsModule,
     MdButtonModule,
     MdCheckboxModule,
+    MdCardModule,
+    MdMenuModule,
+    MdToolbarModule,
+    MdIconModule,
+    MdGridListModule,
+    MdSidenavModule
 
   ],
   providers: [ProductService],

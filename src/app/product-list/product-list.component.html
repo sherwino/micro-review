@@ -1,26 +1,54 @@
 <h2>Browse for Products</h2>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <!-- If there as an error let the user know on the top of the page -->
 <div class=" error" *ngIf="errorMessage"> {{ errorMessage }} </div>
+<div class = "product-list">
+  <md-grid-list cols="3" rowHeight="2:3">
+    <md-grid-tile *ngFor ="let oneProduct of products">
+      <md-card class="product-card">
+        <md-card-header>
+          <div md-card-avatar class="brand-logo"></div>
+          <md-card-title>
+            <h3> {{ oneProduct.prodName }} </h3>
+          </md-card-title>
+          <md-card-subtitle>
+            <h4><i> {{ oneProduct.prodBrand }} </i> </h4>
+            <h4><i> {{ oneProduct.prodModel }} </i> </h4>
+          </md-card-subtitle>
+        </md-card-header>
+        <img md-card-image [src]="oneProduct.prodImg">
+        <md-card-content>
+          <h4><i> {{ oneProduct.prodUPC }} </i> </h4>
+          <h4><i> {{ oneProduct.prodMfg }} </i> </h4>
+          <h4><i> {{ oneProduct.prodParts }} </i> </h4>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button>LIKE</button>
+          <button md-button>SHARE</button>
+        </md-card-actions>
+      </md-card>
+    </md-grid-tile>
+  </md-grid-list>
 
 <!-- List all of the products -->
-<div class = "product-list">
-  <div *ngFor ="let oneProduct of products">
-    <img [src]="oneProduct.image">
-    <h3> {{ oneProduct.name }} </h3>
-    <h4><i> {{ oneProduct.brand }} </i> </h4>
-
     <!-- Using the router, find the product by the id and lets see details page -->
     <!-- <a [routerLink]='product, oneProduct._id'>Details</a> -->
-
   </div>
-</div>
+
+  <md-sidenav-container class="example-container">
+    <md-sidenav #sidenav class="example-sidenav">
+      Jolly good!
+    </md-sidenav>
+
+    <div class="example-sidenav-content">
+      <button type="button" md-button (click)="sidenav.open()">
+        Open sidenav
+      </button>
+    </div>
+
+  </md-sidenav-container>
+
+<!-- If you want to limit the results on a ngFor loop -->
+<!-- <div *ngFor="let data of (myData ? myData.slice(0,10); []); let i = index">
+</div> -->
