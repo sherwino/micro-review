@@ -1,16 +1,20 @@
-/*md-grid-tile {
-  background: lightblue;
-}*/
+.mat-grid-tile {
+  margin: 15px 10px;
+}
 
 /*.mat-grid-list {
-  min-height: ;
+  margin: 15px 10px;
 }*/
 
 .product-card {
   height: 100%;
   background: rgba(255, 255, 255, 0.80);
-  margin: 5px 10px;
+  margin: 15px 10px;
   padding: 0px;
+}
+
+.mat-card {
+  margin: 25px 0px;
 }
 
 .mat-card-image {
@@ -19,22 +23,5 @@
 }
 
 .mat-card-content {
-  padding: 20px;
-}
-
-.example-container {
-  width: 500px;
-  height: 300px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-}
-
-.example-sidenav-content {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
-.example-sidenav {
   padding: 20px;
 }

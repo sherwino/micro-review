@@ -7,6 +7,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductsComponent } from './products/products.component';
 import { SubmitReviewComponent } from './submit-review/submit-review.component';
 import { LoginComponent } from './login/login.component';
+import { ReviewComponent } from './review/review.component';
 // import { FileUploadComponent } from ./'file-upload/file-upload.component';
 
 const routes: Routes = [
@@ -22,6 +23,11 @@ const routes: Routes = [
   {
     path: 'submit',
     component: SubmitReviewComponent
+  },
+
+  {
+    path: 'submit/new',
+    component: ReviewComponent
   },
 
   {

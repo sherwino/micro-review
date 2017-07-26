@@ -64,7 +64,7 @@ newProductform() {
   //lets see what we are receiving from the form
     this.myProductService.createNew(this.newProduct).then((dataFromApi) => {
       console.log(this.newProduct);
-      this.myRouter.navigate(['/browse']);
+      this.myRouter.navigate(['/submit/new']);
 
     })
     .catch((errResponse) => {

@@ -14,7 +14,6 @@ import {MdButtonModule, MdCheckboxModule, MdCardModule, MdMenuModule,
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
-import { ReviewsComponent } from './reviews/reviews.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { CommentsComponent } from './comments/comments.component';
 import { LoginComponent } from './login/login.component';
@@ -23,13 +22,13 @@ import { ProductService } from './services/product.service';
 import { ProductListComponent } from './product-list/product-list.component';
 import { SubmitReviewComponent } from './submit-review/submit-review.component';
 import { HomeComponent } from './home/home.component';
+import { ReviewComponent } from './review/review.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
-    ReviewsComponent,
     ArticlesComponent,
     CommentsComponent,
     LoginComponent,
@@ -37,6 +36,7 @@ import { HomeComponent } from './home/home.component';
     ProductListComponent,
     SubmitReviewComponent,
     HomeComponent,
+    ReviewComponent,
 
   ],
   imports: [

@@ -1,6 +1,15 @@
 <h2>Browse for Products</h2>
 <br>
+<input
+(keyup)="searchTerm$.next($event.target.value)">
 
+<ul *ngIf="results">
+<li *ngFor="let result of results | slice:0:9">
+<a href="{{ result.latest }}" target="_blank">
+{{ result.name }}
+</a>
+</li>
+</ul>
 <!-- If there as an error let the user know on the top of the page -->
 <div class=" error" *ngIf="errorMessage"> {{ errorMessage }} </div>
 <div class = "product-list">
@@ -36,7 +45,7 @@
     <!-- <a [routerLink]='product, oneProduct._id'>Details</a> -->
   </div>
 
-  <md-sidenav-container class="example-container">
+  <!-- <md-sidenav-container class="example-container">
     <md-sidenav #sidenav class="example-sidenav">
       Jolly good!
     </md-sidenav>
@@ -47,7 +56,7 @@
       </button>
     </div>
 
-  </md-sidenav-container>
+  </md-sidenav-container> -->
 
 <!-- If you want to limit the results on a ngFor loop -->
 <!-- <div *ngFor="let data of (myData ? myData.slice(0,10); []); let i = index">
