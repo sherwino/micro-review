@@ -23,6 +23,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { SubmitReviewComponent } from './submit-review/submit-review.component';
 import { HomeComponent } from './home/home.component';
 import { ReviewComponent } from './review/review.component';
+import { ProductSearchPipe } from './product-search';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { ReviewComponent } from './review/review.component';
     SubmitReviewComponent,
     HomeComponent,
     ReviewComponent,
+    ProductSearchPipe
 
   ],
   imports: [
@@ -57,6 +59,7 @@ import { ReviewComponent } from './review/review.component';
 
   ],
   providers: [ProductService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [ProductSearchPipe]
 })
 export class AppModule { }

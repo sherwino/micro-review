@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
-import { SearchService } from './search.service';
-import { Subject } from 'rxjs/Subject';
-import { VERSION } from '@angular/core';
+
+// Now I am just trying to see how to have the products searchable from all of the pages
+import { ProductService } from './services/product.service';
+
 
 declare const $:any;
 
@@ -10,27 +11,27 @@ declare const $:any;
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./styles.min.css'],
-  providers: [SearchService]
+
 })
 
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'microReviews';
-  results: Object;
-  searchTerm$ = new Subject<string>();
+  products:     any[] = [];
+  pattern:      string;  //product search pattern
+  errorMessage: string = '';
 
-  myApiData: Array<any>;
+  constructor(private myProductService: ProductService, private http:Http) {
 
-  constructor(private http:Http, private searchService: SearchService) {
-    console.log(VERSION.full);
+      }
+      ngOnInit() {
+        this.myProductService.getList()
+        .then((productList) => {
+          this.products = productList;
+        })
+        .catch((err) => {
+          this.errorMessage = 'There was an error with your request... try again later';
 
-    this.searchService.search(this.searchTerm$)
-      .subscribe(results => {
-        this.results = results.results;
-    // I saw this example to pull data from a RESTful API easily
-    // this.http.get("https://jsonplaceholder.typicode.com/photos")
-    // .map( response => response.json())
-    // .subscribe(res => this.myApiData = res);
-      });
+        });
+      }
   }
-}

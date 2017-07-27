@@ -37,9 +37,9 @@
                           <a [routerLink]="['#about']"  class="nav-link">About</a>
                       </li>
                   </ul>
-                  <form class="form-inline waves-effect waves-light">
-                      <input class="form-control" type="text" placeholder="Search">
-                  </form>
+                    <div class="form-group form-inline waves-effect waves-light">
+                      <input class="form-control" id="product-search" type="text" placeholder="Search" [(ngModel)]="pattern">
+                    </div>
               </div>
           </div>
       </nav>
