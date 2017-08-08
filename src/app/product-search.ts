@@ -1,7 +1,8 @@
 import { Injectable, Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'prodSearch'
+  name: 'prodSearch',
+  pure: false     // <!-- We mark the pipe as "impure"
 })
 
 @Injectable()
@@ -16,7 +17,8 @@ export class ProductSearchPipe implements PipeTransform {
         return items;
       }
 
-      return items.filter(item => item[field].match(new RegExp(value, 'i')));
+      const myPattern = new RegExp(value, 'i');
+      return items.filter(it => it[field].match(myPattern));
 
   }
 

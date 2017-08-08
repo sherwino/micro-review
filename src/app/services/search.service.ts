@@ -9,7 +9,7 @@ import 'rxjs/add/operator/switchMap';
 @Injectable()
 export class SearchService {
   BASE_URL: string = 'environment.apiUrl';
-  queryUrl: string = '?search=';
+  queryUrl: string = '?=';
 
   constructor(private http: Http) { }
 
@@ -20,7 +20,7 @@ export class SearchService {
   }
 
   searchEntries(term) {
-    return this.http.get(this.BASE_URL + "/search" + this.queryUrl + term)
+    return this.http.get(this.BASE_URL + "/api/search" + this.queryUrl + term)
         .map(res => res.json());
   }
 }

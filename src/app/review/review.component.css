@@ -1,0 +1,15 @@
+/*Submit Review Form*/
+.review-form {
+  margin: 0 25%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.80);
+  padding: 10px 45px;
+}
+
+ng2-completer {
+  border: 0px;
+  box-shadow: none;
+  /*background: #fff;*/
+  border-radius: 2px;
+  padding: 2px;
+}

@@ -6,6 +6,22 @@
   <base href="/">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Roboto -->
+  <script type="text/javascript">
+    WebFontConfig = {
+      google: { families: [ 'Roboto:100,300,400,400italic,500,700:latin' ] }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = 'vendors/webfontloader/webfontloader.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="vendors/loader.css" rel="stylesheet" >
+  <link rel="stylesheet" href="vendors/material-design-icons/iconfont/material-icons.css" rel="stylesheet" >
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
   <!-- Bootstrap core CSS -->
@@ -21,10 +37,19 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/js/mdb.min.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body>
-  <app-root></app-root>
+
+  <body class='full-bg-img body-main image-responsive'>
+
+    <app-root>
+      <div id="loader-container"></div>
+    </app-root>
+
 </body>
+<!--Footer-->
+
 </html>

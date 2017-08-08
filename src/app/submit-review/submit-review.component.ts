@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/Rx';
-import { CompleterService, CompleterData } from 'ng2-completer';
+// import { CompleterService, CompleterData } from 'ng2-completer';
 import { ProductService } from '../services/product.service';
 
 @Component({
